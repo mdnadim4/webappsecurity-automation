@@ -3,30 +3,29 @@ import Utils from './utils'
 const utils = new Utils()
 
 export default class LoginPage {
-  
   public get signinBtn() {
-    return ('#signin_button')
+    return '#signin_button'
   }
   public get userLogin() {
-    return ('#user_login')
+    return '#user_login'
   }
   public get userPassword() {
-    return ('#user_password')
+    return '#user_password'
   }
   public get submitBtn() {
-    return ('[type="submit"]')
+    return '[type="submit"]'
   }
   public get errorMessage() {
-    return ('.alert-error')
+    return '.alert-error'
   }
   public get username() {
-    return ('li:nth-of-type(3) > .dropdown-toggle')
+    return 'li:nth-of-type(3) > .dropdown-toggle'
   }
   public get setting() {
-    return ('li:nth-of-type(2) > .dropdown-toggle')
+    return 'li:nth-of-type(2) > .dropdown-toggle'
   }
   public get logout() {
-    return ('a#logout_link')
+    return 'a#logout_link'
   }
 
   public async visitAndWindowSize() {
@@ -91,5 +90,4 @@ export default class LoginPage {
     await utils.waitAndClick(this.logout)
     await utils.waitForExist(this.signinBtn)
   }
-
 }

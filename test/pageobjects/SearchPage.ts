@@ -1,18 +1,18 @@
-import Utils from "./utils"
+import Utils from './utils'
 const utils = new Utils()
 
 export default class SearchPage {
   public get searchInput() {
-    return ('#searchTerm')
+    return '#searchTerm'
   }
   public get searchKeyword() {
     return 'Bank'
   }
   public get searchHeading() {
-    return ('div.container h2')
+    return 'div.container h2'
   }
   public get searchResult() {
-    return ('div.top_offset')
+    return 'div.top_offset'
   }
 
   public async windowMaximum() {
@@ -42,5 +42,4 @@ export default class SearchPage {
   public async searchResultVerify() {
     expect(this.searchResult).toHaveTextContaining(this.searchKeyword)
   }
-  
 }

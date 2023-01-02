@@ -48,21 +48,21 @@ export default class Utils {
     await browser.forward()
   }
 
-  //  async sauceLogin() {
-  //   await $('#user-name').waitForDisplayed()
-  //   await $('#password').waitForDisplayed()
-  //   await $('#user-name').setValue('standard_user')
-  //   await $('#password').setValue('secret_sauce')
-  //   await $('#login-button').waitForDisplayed()
-  //   await $('#login-button').click()
-  //   expect(browser).toHaveUrlContaining('/inventory.html')
-  // }
+   async sauceLogin() {
+    await $('#user-name').waitForDisplayed()
+    await $('#password').waitForDisplayed()
+    await $('#user-name').setValue('standard_user')
+    await $('#password').setValue('secret_sauce')
+    await $('#login-button').waitForDisplayed()
+    await $('#login-button').click()
+    expect(browser).toHaveUrlContaining('/inventory.html')
+  }
 
-  //  async sauceLogout() {
-  //   await $('#react-burger-menu-btn').waitForDisplayed()
-  //   await $('#react-burger-menu-btn').click()
-  //   await $('a#logout_sidebar_link').waitForDisplayed()
-  //   await $('a#logout_sidebar_link').click()
-  //   expect(browser).toHaveUrlContaining('www.saucedemo.com')
-  // }
+   async sauceLogout() {
+    await $('#react-burger-menu-btn').waitForDisplayed()
+    await $('#react-burger-menu-btn').click()
+    await $('a#logout_sidebar_link').waitForDisplayed()
+    await $('a#logout_sidebar_link').click()
+    expect(browser).toHaveUrlContaining('www.saucedemo.com')
+  }
 }

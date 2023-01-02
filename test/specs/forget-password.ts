@@ -1,19 +1,18 @@
-import ForgetPassword from '../pageobjects/ForgetPasswordPage'
-const forget = new ForgetPassword()
+import ForgetPasswordPage from '../pageobjects/ForgetPasswordPage'
+const forget = new ForgetPasswordPage()
 
 
 describe.only('Forget Password Funcationality', () => {
   before(async () => {
-    await browser.maximizeWindow()
-    await browser.url('/')
+    await forget.windowMaximum()
+    await forget.visit()
   })
 
   it('Verify forget password', async () => {
-    await browser.waitAndClick('#signin_button')
+    await forget.clickOnSigninBtn()
 
-    let forgetPasswordLink = await $('[href="/forgot-password.html"]')
-    await browser.waitAndClick(forgetPasswordLink)
-    expect(browser).toHaveUrlContaining('/forgot-password.html')
+    await forget.waitAndClick(forgetPasswordLink)
+    expect(forget).toHaveUrlContaining('/forgot-password.html')
 
     let emailInput = await $('#user_email')
     let email = 'test@test.com'
@@ -21,8 +20,8 @@ describe.only('Forget Password Funcationality', () => {
     await $(emailInput).setValue(email)
 
     let sendPassBtn = await $('[type="submit"]')
-    await browser.waitAndClick(sendPassBtn)
-    expect(browser).toHaveUrlContaining('/forgotten-password-send.html')
+    await forget.waitAndClick(sendPassBtn)
+    expect(forget).toHaveUrlContaining('/forgotten-password-send.html')
 
     let title = await $('div.page-header>h3')
     await (await $(title)).waitForDisplayed()
