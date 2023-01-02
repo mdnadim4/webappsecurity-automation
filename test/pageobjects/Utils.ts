@@ -25,6 +25,7 @@ export default class Utils {
   }
   public async waitForExist(selector) {
     await $(selector).waitForExist()
+    expect(selector).toBeExisting()
   }
   public async urlContains(url) {
     expect(browser).toHaveUrlContaining(url)
