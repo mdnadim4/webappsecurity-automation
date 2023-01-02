@@ -15,6 +15,7 @@ export default class Utils {
   }
   public async waitForDisplayed(selector) {
     await $(selector).waitForDisplayed()
+    expect(selector).toBeDisplayed()
   }
   public async click(selector) {
     await $(selector).click()
@@ -42,28 +43,13 @@ export default class Utils {
   public async scrollIntoView(selector) {
     await $(selector).scrollIntoView()
   }
+  public async haveLength(selector, count) {
+    expect(selector).toHaveLength(count)
+  }
   public async back() {
     await browser.back()
   }
   public async forward() {
     await browser.forward()
-  }
-
-   async sauceLogin() {
-    await $('#user-name').waitForDisplayed()
-    await $('#password').waitForDisplayed()
-    await $('#user-name').setValue('standard_user')
-    await $('#password').setValue('secret_sauce')
-    await $('#login-button').waitForDisplayed()
-    await $('#login-button').click()
-    expect(browser).toHaveUrlContaining('/inventory.html')
-  }
-
-   async sauceLogout() {
-    await $('#react-burger-menu-btn').waitForDisplayed()
-    await $('#react-burger-menu-btn').click()
-    await $('a#logout_sidebar_link').waitForDisplayed()
-    await $('a#logout_sidebar_link').click()
-    expect(browser).toHaveUrlContaining('www.saucedemo.com')
   }
 }
