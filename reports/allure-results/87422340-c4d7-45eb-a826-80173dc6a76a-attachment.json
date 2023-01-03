@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "li:nth-of-type(3) > .dropdown-toggle"
+}

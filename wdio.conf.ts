@@ -25,10 +25,6 @@ export const config: Options.Testrunner = {
     },
   },
 
-  // Browserstack Config
-  user: process.env.BROWSERSTACK_USERNAME,
-  key: process.env.BROWSERSTACK_ACCESS_KEY,
-
   //
   // ==================
   // Specify Test Files
@@ -80,6 +76,10 @@ export const config: Options.Testrunner = {
       maxInstances: 5,
       //
       browserName: 'chrome',
+      // Headless Command for chrome
+      'goog:chromeOptions': {
+        args: ['headless'],
+      },
 
       acceptInsecureCerts: true,
       // If outputDir is provided WebdriverIO can capture driver session logs
@@ -157,7 +157,17 @@ export const config: Options.Testrunner = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter
-  reporters: ['spec'],
+  reporters: [
+    'spec',
+    [
+      'allure',
+      {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+      },
+    ],
+  ],
 
   //
   // Options to be passed to Mocha.

@@ -4,7 +4,10 @@
   "description": "Wepappsecuirty site automation by WebdriverIO",
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
+    "allure-report": "allure generate --clean allure-reports && allure open",
+    "allure-delete": "rm -rf ./allure-report",
     "browserstack": "wdio run ./browserstack.conf.ts"
+    
   },
   "keywords": [
     "webdriverio"
@@ -15,6 +18,7 @@
     "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
+    "@wdio/allure-reporter": "^8.1.0",
     "@wdio/browserstack-service": "^8.1.1",
     "@wdio/cli": "^8.0.15",
     "@wdio/devtools-service": "^8.1.0",
@@ -22,6 +26,7 @@
     "@wdio/mocha-framework": "^8.0.14",
     "@wdio/spec-reporter": "^8.0.14",
     "chromedriver": "^108.0.0",
+    "clean-dir": "^1.0.3",
     "prettier": "^2.8.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4",

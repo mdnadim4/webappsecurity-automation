@@ -33,7 +33,7 @@ const parallelConfig = {
         buildName: 'webdriverio-build-1'
       }
     },
-    maxInstances: 10
+    maxInstances: 5
   };
   const { config: baseConfig } = require('./wdio.conf');
   exports.config = { ...baseConfig, ...parallelConfig };
