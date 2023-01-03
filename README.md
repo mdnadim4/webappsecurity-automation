@@ -1,37 +1,12 @@
 
-# WebdriverIO Automation
+# WebdriverIO Project Automation
 
-Zero Webappsecurity site is automated by webdriverio. 
+Zero Webappsecurity site is automated by webdriverio Javascript framework.
 
 
 ## Authors
 
 - [Nadim Mahmud](https://github.com/mdnadim4)
-
-
-## Installation
-
-Install all dependency with npm
-
-```bash
-  npm install
-```
-    
-## Running Tests
-
-To run tests, run the following command
-
-```bash
-  npm run wdio
-```
-
-
-## Usage
-
-- Page Object Model
-- TypeScript
-- Allure Reporting
-- Cross Browser Testing with Browserstack
 
 
 ## Run Locally
@@ -54,11 +29,23 @@ Install dependencies
   npm install
 ```
 
-To run test
+To run tests, run the following command
 
 ```bash
   npm run wdio
 ```
+## Usage
+
+- WebdriverIO Framework
+- Mocha Test Framework
+- Chai Assertion Library
+- TypeScript Language
+- Node JS Server
+- Page Object Model Pattern
+- Allure Reporting System
+- Cross Browser Testing with Browserstack
+
+
 ## Screenshots
 
 [Allure Reporting Graph](https://www.screencast.com/t/1xp3rpycWpq)
