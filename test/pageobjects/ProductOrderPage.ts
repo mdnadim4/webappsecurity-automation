@@ -103,7 +103,7 @@ export default class ProductOrderPage {
 
   public async visitAndWindowSize() {
     await utils.windowMaximum()
-    await utils.visit('/')
+    await utils.visit('https://www.saucedemo.com/')
   }
   public async verifyInputFieldVisibility() {
     await utils.waitForDisplayed(this.username)
