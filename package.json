@@ -4,7 +4,7 @@
   "description": "Wepappsecuirty site automation by WebdriverIO",
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts",
-    "allure-report": "allure generate --clean allure-reports && allure open",
+    "allure-report": "allure generate --clean ./reports/allure-results && allure open",
     "allure-delete": "rm -rf ./allure-report",
     "browserstack": "wdio run ./browserstack.conf.ts"
     
