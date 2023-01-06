@@ -1,6 +1,6 @@
 const parallelConfig = {
-    user: 'nadimmahmud2',
-    key: 'qKLfLEW6HwJFQrGize6K',
+    user: 'nadimmahmud2' || process.env.BROWSERSTACK_USERNAME,
+    key: 'qKLfLEW6HwJFQrGize6K' || process.env.BROWSERSTACK_ACCESS_KEY,
     hostname: 'hub.browserstack.com',
     capabilities: [
       {
