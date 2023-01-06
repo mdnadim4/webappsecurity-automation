@@ -50,6 +50,7 @@ export default class LoginPage {
   }
 
   public async clickOnSubmitBtn() {
+    await utils.waitForSecornd(2)
     await utils.waitAndClick(this.submitBtn)
   }
 

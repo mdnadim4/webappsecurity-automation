@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1672998854771' stop='1672998914779'>
+    <name>Login Funcationality</name>
+    <title>Login Funcationality</title>
+    <test-cases>
+        <test-case start='1672998854771' status='broken' stop='1672998914779'>
+            <name>"before all" hook for Login Funcationality</name>
+            <title>"before all" hook for Login Funcationality</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='2-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Safari-15.6.1'/>
+            </parameters>
+            <steps>
+                <step start='1672998854773' status='passed' stop='1672998855232'>
+                    <name>POST /session/:sessionId/window/maximize</name>
+                    <title>POST /session/:sessionId/window/maximize</title>
+                    <attachments>
+                        <attachment title='Response' source='b7670437-2b65-43f1-b83d-c39842f26aeb-attachment.json' type='application/json' size='58'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1672998855233' status='broken' stop='1672998914779'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='f5911237-0b84-4037-848a-90b6dc76edb9-attachment.json' type='application/json' size='46'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Timeout of 60000ms exceeded. The execution in the test "Login Funcationality "before all" hook for "Click on Signin Button"" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\Users\Nadim\Desktop\webappsecurity-webdriverio\test\specs\login.ts)</message>
+                <stack-trace>Error: Timeout of 60000ms exceeded. The execution in the test "Login Funcationality "before all" hook for "Click on Signin Button"" took too long. Try to reduce the run time or increase your timeout for test specs (https://webdriver.io/docs/timeouts). (C:\Users\Nadim\Desktop\webappsecurity-webdriverio\test\specs\login.ts)
+                    at createTimeoutError (C:\Users\Nadim\Desktop\webappsecurity-webdriverio\node_modules\mocha\lib\errors.js:498:15)
+                    at Hook.Runnable._timeoutError (C:\Users\Nadim\Desktop\webappsecurity-webdriverio\node_modules\mocha\lib\runnable.js:431:10)
+                    at Timeout.&lt;anonymous> (C:\Users\Nadim\Desktop\webappsecurity-webdriverio\node_modules\mocha\lib\runnable.js:246:24)
+                    at listOnTimeout (node:internal/timers:559:17)
+                    at processTimers (node:internal/timers:502:7)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

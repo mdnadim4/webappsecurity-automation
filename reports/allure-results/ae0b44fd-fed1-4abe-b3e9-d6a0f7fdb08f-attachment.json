@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "Unable to locate element: li:nth-of-type(3) > .dropdown-toggle",
+  "stacktrace": "RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8\nWebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:182:5\nNoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:394:5\nelement.find/</<@chrome://remote/content/marionette/element.sys.mjs:275:16\n"
+}
